@@ -7,5 +7,6 @@ public class MessageService {
         Message message3 = new Message(user1, user2, "Сообщение?", "07.12.2024 - 09:30");
         Message message4 = new Message(user2, user1, "Когда", "07.12.2024 - 12:00");
         Message[] messages = {message1, message2, message3, message4};
+        return messages;
     }
 }
