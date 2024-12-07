@@ -13,6 +13,10 @@ public class Message {
 
     public Message() {}
 
+    public String getInformation(){
+        return "Сообщение от " + getSender() + "к " + getRecipient() + ": " + getText() + "отправлено " + getDate();
+    }
+
     public Message(User sender, User recipient, String text, String date) {
         this.sender = sender;
         this.recipient = recipient;
