@@ -2,11 +2,8 @@ package ru.messenger;
 
 public class Main {
     public static void main(String[] args) {
-        User[] users = UserService.create4User();
-
-        Message[] messages1 = MessageService.create4Message(users[0], users[1]);
-
-        Message[] messages2 = MessageService.create4Message(users[2], users[3]);
+        User[] users = UserService.create4Users();
+        Message[] messages = MessageService.create4Messages(users);
 
         for (User user : users) {
             System.out.println(user.getInformation());
@@ -14,12 +11,9 @@ public class Main {
 
         System.out.println();
 
-        for (Message message : messages1) {
+        for (Message message : messages) {
             System.out.println(message.getInformation());
         }
 
-        for (Message message : messages2) {
-            System.out.println(message.getInformation());
-        }
     }
 }

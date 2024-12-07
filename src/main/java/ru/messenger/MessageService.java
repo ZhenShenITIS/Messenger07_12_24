@@ -1,12 +1,17 @@
 package ru.messenger;
+import java.time.LocalTime;
 
 public class MessageService {
-    public static Message[] create4Message (User user1, User user2) {
-        Message message1 = new Message(user1, user2, "Привет", "07.12.2024 - 09:00");
-        Message message2 = new Message(user2, user1, "Что ты как", "07.12.2024 - 09:15");
-        Message message3 = new Message(user1, user2, "Сообщение?", "07.12.2024 - 09:30");
-        Message message4 = new Message(user2, user1, "Когда", "07.12.2024 - 12:00");
-        Message[] messages = {message1, message2, message3, message4};
+    public static Message send (User sender, User recepient, String text) {
+        String dateTime = LocalTime.now().toString();
+        return new Message(sender, recepient, text, dateTime);
+    }
+    public static Message[] create4Messages(User[] users){
+        Message[] messages = new Message[4];
+        messages[0]= send(users[0], users[1], "Привет");
+        messages[1]= send(users[1], users[2], "Что ты как");
+        messages[2]= send(users[2], users[3], "Сообщение?");
+        messages[3]= send(users[3], users[0], "Когда");
         return messages;
     }
 }
