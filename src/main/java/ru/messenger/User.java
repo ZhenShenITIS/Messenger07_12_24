@@ -46,4 +46,8 @@ public class User {
         this.password = password;
     }
 
+    public String getInformation() {
+        return "Имя пользователя: " + getUserName() + ", никнейм: " + getNickName() + ", телефон: " + getPhone();
+    }
+
 }
