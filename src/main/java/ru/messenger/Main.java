@@ -13,14 +13,16 @@ public class Main {
         Message message4 = new Message(user4, user1, "Когда", "07.12.2024 - 12:00");
 
 
-        user1.getInformation();
-        user2.getInformation();
-        user3.getInformation();
-        user4.getInformation();
+        System.out.println(user1.getInformation());
+        System.out.println(user2.getInformation());
+        System.out.println(user3.getInformation());
+        System.out.println(user4.getInformation());
 
-        message1.getInformation();
-        message2.getInformation();
-        message3.getInformation();
-        message4.getInformation();
+        System.out.println();
+
+        System.out.println(message1.getInformation());
+        System.out.println(message2.getInformation());
+        System.out.println(message3.getInformation());
+        System.out.println(message4.getInformation());
     }
 }
