@@ -1,9 +1,9 @@
 package ru.messenger;
-import java.time.LocalTime;
+import java.time.LocalDateTime;
 
 public class MessageService {
     public static Message send (User sender, User recepient, String text) {
-        String dateTime = LocalTime.now().toString();
+        String dateTime = LocalDateTime.now().toString().split("\\.")[0];
         return new Message(sender, recepient, text, dateTime);
     }
     public static Message[] create4Messages(User[] users){
